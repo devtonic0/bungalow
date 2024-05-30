@@ -68,7 +68,7 @@ setInterval(() => {
   io.emit('poll', game.state)
 }, 33)
 
-const port = 3000
+const port = process.env.PORT || 3000
 server.listen(port, () => {
   console.log(`Game is running at ${port}`)
 })
